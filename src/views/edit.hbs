@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Update</h1>
+    <div class="update-form">
+        <form method="POST" action="/{{todo._id}}?_method=PUT" >
+            <label for="name">Todo</label>
+            <input type="text" value="{{todo.name}}" id="name" name="name">
+            <button type="submit" class="btn-save">Lưu</button>
+        </form>
+    </div>
+</div>

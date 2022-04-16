@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>TodoList</h1>
+    <div class="input-form">
+        <form method="POST" action="/">
+            <input type="text" placeholder="Add todos..." name="name" id="name" required/>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <div class="todos">
+        {{#each todo}}
+            <div class="todo">
+                <h3>{{this.name}}</h3>
+                <div>
+                    <a href="/{{this._id}}/update" class="btn btn-fix">Sửa</a>
+                    <a class="btn btn-delete" id="btn-delete" data="{{this._id}}">Xoá</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+<form name="deleteForm" method="POST"></form>
+
+<script>
+    var todoId
+    var deleteForm = document.forms['deleteForm']
+    var btnDelete = document.getElementById('btn-delete')
+
+    btnDelete.onclick = () => {
+        todoId = btnDelete.attributes.data.value
+        deleteForm.action = '/' + todoId + '?_method=DELETE'
+        deleteForm.submit()
+    }
+
+</script>

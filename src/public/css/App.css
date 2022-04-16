@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 400px;
+    max-height: 600px;
+    padding: 20px;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.container h1 {
+    align-self: center;
+}
+
+.input-form form{
+    display: flex;
+}
+
+.input-form input {
+    flex: 1;
+    height: 50px;
+    font-size: 14px;
+    padding-left: 18px;
+    border: none;
+    outline: none;
+}
+
+.input-form button {
+    padding: 0 20px;
+    border: none;
+}
+
+.todos {
+    overflow-y: scroll;
+}
+
+.todos::-webkit-scrollbar {
+    width: 3px;
+    background-color: transparent;
+}
+.todos::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 999px;
+}
+
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 18px;
+    margin-top: 12px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(109, 98, 156);
+}
+
+.btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    margin-left: 6px;
+    text-decoration: none;
+}
+
+.btn-fix {
+    background-color: rgb(0, 217, 255);
+}
+
+.btn-delete {
+    background-color: rgb(214, 46, 46);
+}
+
+.update-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-form form input {
+    margin: 20px 0;
+    height: 30px;
+    font-size: 14px;
+    padding-left: 18px;
+    border-radius: 3px;
+    border: none;
+}
+
+.btn-save {
+    color: #fff;
+    padding: 12px 12px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(0, 217, 255);
+    max-width: 60px;
+    cursor: pointer;
+}
